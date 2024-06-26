@@ -1,0 +1,55 @@
+@import 'src/assets/styles/theming';
+
+:host {
+
+    .wrapper {
+        @include flexWrapper(column, flex-start, center);
+        width: 100%;
+        row-gap: $gap;
+
+        .title {
+            width: 400px;
+            font-size: 35px;
+            margin-top: $margin;
+            text-align: center;
+            border: 1px solid black;
+            padding: padding_minus(2);
+            border-radius: 16px;
+        }
+
+        .has-border {
+            @include flexWrapper(column, flex-start, center);
+            text-align: justify;
+            width: 600px;
+
+            &::after {
+                margin-top: $margin;
+                display: block;
+                content: '';
+                height: 1px;
+                width: 120%;
+                background: black;
+            }
+        }
+        
+        .protection-from-threat {
+            ::ng-deep ul > li {
+                margin: margin_minus(2) 0 0 20px;
+            }
+        }
+
+        .links {
+            margin-bottom: $margin;
+
+            .links-header {
+                font-size: 20px;
+                text-align: center;
+                margin-bottom: $margin;
+            }
+
+            ::ng-deep a {
+                margin-bottom: margin_minus(2);
+            }
+        }
+    }
+}

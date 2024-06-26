@@ -1,0 +1,28 @@
+<div class="wrapper">
+    <div (click)="goHome()"
+         class="home-button">
+        <img src="assets/icons/icon.png"
+             height="40"
+             width="40"/>
+        <div class="home-button-text">
+            pet-project
+        </div>
+    </div>
+    <div class="tabs">
+        @for (tab of tabs; track LTab.NAME) {
+            <ng-container *ngLet="routeName$ | async as routeName">
+                <div [routerLink]="tab[LTab.ROUTE]"
+                     [class.selected-tab]="routeName?.includes(tab[LTab.ROUTE])"
+                     class="tab">
+                    {{ tab[LTab.NAME] }}
+                </div>
+            </ng-container>
+        }
+    </div>
+    <div class="switch-light-mode">
+        <div title="Функционал пока что не готов"
+             class="switch">
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+@import '/src/assets/styles/theming.scss';
+
+:host {
+    
+    .wrapper {
+        @include flexWrapper(column, space-between, center);
+        width: calc(100% - 16px);
+        height: 200px;
+        background: rgb(211 234 255);
+        padding: padding_minus(2);
+
+        .info-field {
+            @include flexWrapper(column, flex-start, center);
+
+            .contact {
+                @include flexWrapper(row, flex-start, center);
+                width: 210px;
+                column-gap: gap_minus(2);
+                text-decoration: none;
+                padding: 8px;
+
+                &:hover {
+                    background: rgb(94, 200, 241);
+                    border-radius: 16px;
+                    transition: 0.3s;
+                }
+
+                .text {
+                    color: black;
+                }
+            }
+        }
+
+        .powered-by-field {
+            .name {
+                font-weight: 700;
+            }
+        }
+    }
+}

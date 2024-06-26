@@ -1,0 +1,62 @@
+@import '/src/assets/styles/theming.scss';
+
+:host {
+
+    .wrapper {
+        @include flexWrapper(row, space-between, center);
+        width: calc(100% - 32px);
+        height: 80px;
+        background: rgb(211 234 255);
+        padding: 0 $padding;
+
+        .home-button {
+            @include flexWrapper(row, flex-start, center);
+            height: 44px;
+            column-gap: $gap;
+            padding: 8px;
+
+            &:hover {
+                cursor: pointer;
+                background: rgb(94, 200, 241);
+                border-radius: 8px;
+                transition: 0.5s;
+                box-shadow: 0 0 2px #0f8de9;
+            }
+
+            &-text {
+                font-size: 30px;
+            }
+        }
+
+        .tabs {
+            @include flexWrapper(row, center, center);
+            column-gap: $gap;
+
+            .tab {
+                padding: 8px margin_plus(2);
+                background: rgb(247, 247, 255);
+                border-radius: 8px;
+
+                &:hover {
+                    cursor: pointer;
+                    background: rgb(180, 219, 243);
+                    transition: 0.3s;
+                }
+            }
+
+            .selected-tab {
+                color: #0f8de9;
+                border: 1px solid #0f8de9;
+            }
+        }
+
+        .switch-light-mode {
+            .switch {
+                width: 30px;
+                height: 30px;
+                background: grey;
+                border-radius: 50%;
+            }
+        }
+    }
+}

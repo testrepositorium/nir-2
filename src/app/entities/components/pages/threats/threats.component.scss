@@ -1,0 +1,41 @@
+@import 'src/assets/styles/theming';
+
+:host {
+    .wrapper {
+        @include flexWrapper(row, center, center);
+        height: 615px;
+        column-gap: gap_plus(2);
+
+        .threat {
+            @include flexWrapper(column, flex-end, center);
+            height: 400px;
+            width: 250px;
+            border: 1px solid black;
+            border-radius: 16px;
+            background-size: cover;
+
+            .text {
+                @include flexWrapper(row, center, center);
+                width: 80%;
+                height: 45px;
+                text-align: center;
+                padding: padding_minus(2);
+                background: rgb(211 234 255);
+                border: 1px solid #0f8de9;
+                border-radius: 8px;
+                margin-bottom: margin_minus(2);
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                transition: 0.5s;
+                cursor: pointer;
+
+                .text {
+                    background: rgb(94, 200, 241);
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <div class="info-field">
+        @for (contact of contactsList; track LContact.TEXT) {
+            <a [href]="contact[LContact.URL]"
+               target="_blank"
+               class="contact">
+                <img [src]="contact[LContact.ICON]"
+                     width="35"/>
+                <div class="text">
+                    {{ contact[LContact.TEXT] }}
+                </div>
+            </a> 
+        }
+    </div>
+    <div class="powered-by-field">
+        <span>powered by </span>
+        <span class="name">Efim Bolshakov</span>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="wrapper">
+    <div class="title">
+        {{ threatInfoThresaurus[route][EThreatInfoField.TITLE] }}
+    </div>
+    <div [innerHTML]="threatInfoThresaurus[route][EThreatInfoField.DESCRIPTION]"
+         class="has-border"
+    ></div>
+    <div [innerHTML]="threatInfoThresaurus[route][EThreatInfoField.CONSEQUANCES]"
+         class="has-border"
+    ></div>
+    <div [innerHTML]="threatInfoThresaurus[route][EThreatInfoField.PROTECTION]"
+         class="protection-from-threat has-border"
+    ></div>
+    <div class="links">
+        <div class="links-header">
+            Список полезных ссылок:
+        </div>
+        <div [innerHTML]="threatInfoThresaurus[route][EThreatInfoField.LINKS]"
+        ></div>
+    </div>
+</div>

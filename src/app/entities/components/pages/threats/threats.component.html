@@ -1,0 +1,14 @@
+@if (isListVisible) {
+    <div class="wrapper">
+        @for (threat of threats; track LThreatCard.TITLE) {
+            <div [routerLink]="'/' + ETab.THREATS + '/' + threat[LThreatCard.ROUTE]"
+                 [style.background-image]="'url(' + threat[LThreatCard.IMAGE] + ')'"
+                 class="threat">
+                 <div class="text">
+                    {{ threat[LThreatCard.TITLE] }}
+                 </div>
+            </div>
+        }
+    </div>
+}
+<router-outlet/>

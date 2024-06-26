@@ -1,0 +1,23 @@
+$padding: 16px;
+$margin: 16px;
+$gap: 16px;
+
+@function gap_minus($devider) {
+    @return $gap / $devider;
+}
+
+@function gap_plus($multiplier) {
+    @return $gap * $multiplier;
+}
+
+@function padding_minus($devider) {
+    @return $padding / $devider;
+}
+
+@function margin_minus($devider) {
+    @return $margin / $devider;
+}
+
+@function margin_plus($multiplier) {
+    @return $margin * $multiplier;
+}
